@@ -1,6 +1,23 @@
-h1 {
-    font-size: 2rem;
-  }
-  p {
-    font-size: 1rem;
-  }
+body {
+  background-color: #ecf0f1;
+}
+
+.btn {
+  cursor: pointer;
+}
+body {
+  color: #34495e;
+}
+
+.clicked {
+  color: #7f8c8d;
+}
+
+.form ,
+.greetings {
+  display: none;
+}
+
+.showing {
+  display: block;
+}
