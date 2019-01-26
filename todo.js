@@ -12,14 +12,14 @@ function deleteToDo(event) {
     const li = btn.parentNode;
     toDoList.removeChild(li);
     const cleanToDos = toDos.filter(function(toDo) {
-        return toDo.id !== parseInt(li.id);
+        return toDo.id !== parseInt(li.id); // 조건에 맞는 새로운 배열을 리턴
     });
     toDos = cleanToDos;
     saveToDos();
 }
 
 function saveToDos() {
-    localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
+    localStorage.setItem(TODOS_LS, JSON.stringify(toDos)); // localstorage 에는 object를 json 형태로 변환해서 저장해야함
 }
 
 function paintToDo(text) {
@@ -52,7 +52,7 @@ function handleSubmit(event) {
 function loadToDos() {
     const loadedToDos = localStorage.getItem(TODOS_LS);
     if(loadedToDos !== null) {
-        const parsedToDos = JSON.parse(loadedToDos);
+        const parsedToDos = JSON.parse(loadedToDos); // json을 문자열 형태로 가공한다
         parsedToDos.forEach(function(toDo) {
             paintToDo(toDo.text);
         })
