@@ -43,7 +43,7 @@ function paintToDo(text) {
 }
 
 function handleSubmit(event) {
-    event.preventDefault();
+    event.preventDefault(); //
     const currentValue = toDoInput.value;
     paintToDo(currentValue);
     toDoInput.value = "";
